@@ -1,0 +1,94 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  padding: 2rem;
+}
+
+.content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.content h1 {
+  color: #4f46e5;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.content p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.loginButton,
+.demoButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.loginButton {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.loginButton:hover {
+  background-color: #4338ca;
+}
+
+.demoButton {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.demoButton:hover {
+  background-color: #d1d5db;
+}
+
+.features {
+  text-align: left;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+}
+
+.features h2 {
+  color: #4f46e5;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.features li:before {
+  content: "✓";
+  color: #4f46e5;
+  margin-right: 0.5rem;
+}

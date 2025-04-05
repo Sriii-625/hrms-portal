@@ -1,0 +1,149 @@
+.threadsContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.profileHeader {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.profileInfo h1 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+
+.username {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.followers {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.website {
+  color: #4F46E5;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.createThread {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.threadInput {
+  width: 100%;
+  min-height: 100px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  resize: none;
+  margin-bottom: 15px;
+}
+
+.postActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mediaButton {
+  padding: 8px 16px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.postButton {
+  padding: 8px 24px;
+  background: #4F46E5;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.thread {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.threadHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  font-size: 24px;
+}
+
+.authorName {
+  font-weight: 500;
+  color: white;
+  margin-right: 10px;
+}
+
+.timestamp {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.threadContent {
+  color: white;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.threadActions {
+  display: flex;
+  gap: 20px;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+
+.actionButton:hover {
+  transform: scale(1.1);
+} 

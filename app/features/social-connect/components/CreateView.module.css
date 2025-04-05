@@ -1,0 +1,203 @@
+.createContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.createContainer h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.createTypes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.typeButton {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+}
+
+.typeButton.active {
+  color: white;
+}
+
+.typeButton.active::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #4F46E5;
+}
+
+.createForm {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.contentInput {
+  width: 100%;
+  min-height: 150px;
+  padding: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.contentInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mediaDropzone {
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.mediaDropzone:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dropzoneContent {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.folderIcon {
+  font-size: 48px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.selectedFile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+
+.removeFile {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 5px;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.mediaButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.mediaButton {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mediaButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.submitButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.draftButton {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.postButton {
+  padding: 8px 24px;
+  background: #4F46E5;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.postButton:hover {
+  background: #4338CA;
+}
+
+.picker {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.pickerItem {
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.pickerItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mediaButton.active {
+  background: rgba(79, 70, 229, 0.3);
+}
+
+.mediaButtons {
+  position: relative;
+}
+
+.postButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+} 

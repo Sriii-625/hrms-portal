@@ -1,0 +1,168 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.assetList {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.assetCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.assetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.assetHeader h3 {
+  color: #1a1a1a;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.status {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.returned {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.damaged {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.lost {
+  background-color: #e2e8f0;
+  color: #1f2937;
+}
+
+.assetDetails {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.assetDetails p {
+  margin: 0.5rem 0;
+}
+
+.assetActions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.statusButtons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actionButton:hover {
+  background-color: #f8fafc;
+}
+
+.actionButton.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.notes {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.notes h4 {
+  color: #1a1a1a;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.notes p {
+  color: #4a5568;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.addNote {
+  margin-top: 1rem;
+}
+
+.noteInput {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 0.5rem;
+  resize: vertical;
+}
+
+.noteActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.saveButton,
+.addNoteButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.saveButton:hover,
+.addNoteButton:hover {
+  background-color: #1d4ed8;
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #ffffff;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton:hover {
+  background-color: #f8fafc;
+}

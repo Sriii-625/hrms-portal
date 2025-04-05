@@ -1,0 +1,154 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.employeeInfo {
+  margin-bottom: 2rem;
+}
+
+.infoCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.infoCard h3 {
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.infoCard p {
+  color: #4a5568;
+  margin: 0.5rem 0;
+}
+
+.workflow {
+  margin-bottom: 2rem;
+}
+
+.steps {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.step {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #e2e8f0;
+}
+
+.step.pending {
+  border-left-color: #f59e0b;
+}
+
+.step.in-progress {
+  border-left-color: #3b82f6;
+}
+
+.step.completed {
+  border-left-color: #10b981;
+}
+
+.stepHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stepHeader h4 {
+  color: #1a1a1a;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.status {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.step.pending .status {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.step.in-progress .status {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.step.completed .status {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.stepFooter {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.statusButton {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.statusButton:hover {
+  background-color: #f8fafc;
+}
+
+.statusButton.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.notes {
+  margin-top: 2rem;
+}
+
+.notesInput {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  margin-top: 0.5rem;
+  resize: vertical;
+}
+
+.saveButton {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.saveButton:hover {
+  background-color: #1d4ed8;
+}

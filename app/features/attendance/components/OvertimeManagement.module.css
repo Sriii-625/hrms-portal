@@ -1,0 +1,152 @@
+.container {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  color: white;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.overtimeForm {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.inputGroup {
+  margin-bottom: 16px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+}
+
+.submitButton {
+  background: #4F46E5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+  background: #4338CA;
+  transform: translateY(-2px);
+}
+
+.requestList {
+  margin-top: 24px;
+}
+
+.requestList h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.requestItem {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.requestHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.pending {
+  background: rgba(251, 191, 36, 0.2);
+  color: #FBB724;
+}
+
+.approved {
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ADE80;
+}
+
+.rejected {
+  background: rgba(255, 75, 75, 0.2);
+  color: #FF4B4B;
+}
+
+.requestDetails {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.approveButton, .rejectButton {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.approveButton {
+  background: #4ADE80;
+  border: none;
+  color: white;
+}
+
+.rejectButton {
+  background: transparent;
+  border: 1px solid #FF4B4B;
+  color: #FF4B4B;
+}
+
+.approveButton:hover {
+  background: #22C55E;
+  transform: translateY(-2px);
+}
+
+.rejectButton:hover {
+  background: rgba(255, 75, 75, 0.1);
+  transform: translateY(-2px);
+} 

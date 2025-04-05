@@ -1,0 +1,124 @@
+.notificationsContainer {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.filterButton.active {
+  background: #0095F6;
+  color: white;
+}
+
+.notificationsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notificationItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.notificationItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.notificationContent {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.notificationText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.userName {
+  color: white;
+  font-weight: 500;
+}
+
+.action {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.timestamp {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.actionButton {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.actionButton.like {
+  background: #FF3B5C;
+  color: white;
+}
+
+.actionButton.comment {
+  background: #0095F6;
+  color: white;
+}
+
+.actionButton.mention {
+  background: #34B7F1;
+  color: white;
+}
+
+.actionButton.shopping {
+  background: #00C16E;
+  color: white;
+} 

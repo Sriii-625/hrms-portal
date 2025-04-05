@@ -1,0 +1,302 @@
+.reelsContainer {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.reelView {
+  width: 100%;
+  max-width: 400px;
+  height: 90vh;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.videoContainer {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.videoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+}
+
+.playIcon {
+  font-size: 48px;
+  opacity: 0.8;
+}
+
+.reelInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  color: white;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  font-size: 24px;
+}
+
+.authorName {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.description {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.engagementMetrics {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.metric:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.metric.liked {
+  color: #ff4b4b;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.count {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.createReelButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.createReelButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navButton,
+.prevButton,
+.nextButton {
+  display: none;
+}
+
+.pauseIcon {
+  font-size: 48px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.videoContainer:hover .pauseIcon,
+.videoContainer:hover .playIcon {
+  opacity: 0.8;
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.progress {
+  height: 100%;
+  background: #4F46E5;
+  transition: width 0.1s linear;
+}
+
+/* Progress dots styles */
+.progressDots {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dot.activeDot {
+  background: white;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* Add these new styles */
+
+.commentsOverlay,
+.shareOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  z-index: 20;
+}
+
+.commentsContainer,
+.shareContainer {
+  position: relative;
+  max-height: 60vh;
+}
+
+.closeButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.commentsList {
+  margin: 20px 0;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.commentItem {
+  margin-bottom: 12px;
+}
+
+.commentUser {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.commentText {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.addComment {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.commentInput {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sendButton {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #4F46E5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.friendsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.friendItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.friendItem:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.friendAvatar {
+  font-size: 24px;
+}
+
+.friendName {
+  font-size: 16px;
+}
+
+.createReelButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+} 

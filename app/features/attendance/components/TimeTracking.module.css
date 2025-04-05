@@ -1,0 +1,131 @@
+.container {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  color: white;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.timeActions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.timeButton {
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  color: white;
+}
+
+.timeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.timeInButton {
+  background: #4ADE80;
+}
+
+.timeInButton:not(:disabled):hover {
+  background: #22C55E;
+  transform: translateY(-2px);
+}
+
+.timeOutButton {
+  background: #FF4B4B;
+}
+
+.timeOutButton:not(:disabled):hover {
+  background: #DC2626;
+  transform: translateY(-2px);
+}
+
+.timeRecords {
+  margin-top: 30px;
+}
+
+.timeRecords h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.recordItem {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.recordItem:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.recordHeader {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.recordDetails {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.recordDetails div {
+  margin-bottom: 5px;
+}
+
+.currentSession {
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.currentSession h3 {
+  color: #4ADE80;
+  margin-bottom: 12px;
+}
+
+.sessionInfo {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.active {
+  border-color: rgba(74, 222, 128, 0.4);
+}
+
+.activeIndicator {
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ADE80;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 8px;
+} 

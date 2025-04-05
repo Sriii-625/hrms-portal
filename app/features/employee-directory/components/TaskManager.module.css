@@ -1,0 +1,160 @@
+.container {
+  padding: 20px;
+}
+
+.container h2 {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.addTaskForm {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.taskInput {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+}
+
+.timeInputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.timeInput {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 120px;
+}
+
+.addButton {
+  background: #4F46E5;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  background: #4338CA;
+  transform: translateY(-2px);
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.taskItem {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.taskItem:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.taskItem.completed .taskTitle {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.checkboxContainer {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: 24px;
+  height: 24px;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.checkboxContainer:hover .checkmark {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.checkboxContainer input:checked ~ .checkmark {
+  background: #4F46E5;
+  border-color: #4F46E5;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkboxContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.taskContent {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskTitle {
+  color: white;
+  font-size: 16px;
+}
+
+.taskTime {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+} 

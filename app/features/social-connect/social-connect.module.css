@@ -1,0 +1,436 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(to right, #8b5cf6, #6d28d9);
+  color: white;
+}
+
+.createPost {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.postInput {
+  width: 100%;
+  min-height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.fileInput {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.postButton {
+  background: #6d28d9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.postButton:hover {
+  background: #5b21b6;
+}
+
+.imagePreview {
+  position: relative;
+  margin: 10px 0;
+}
+
+.removeImage {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.postImage {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.postForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.postInput {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: none;
+  color: white;
+}
+
+.postActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mediaButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mediaButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.mediaButton.active {
+  background: #8b5cf6;
+  color: white;
+}
+
+.selectedFile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: white;
+}
+
+.selectedFile button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #666;
+}
+
+.postButton {
+  margin-left: auto;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #8b5cf6, #6366f1);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.postButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
+}
+
+.postButton:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-left: 60px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1rem;
+}
+
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-2px);
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.tabs button {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button.activeTab {
+  color: white;
+  border-bottom: 2px solid #4F46E5;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-left: 80px;
+}
+
+.postForm {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.postInput {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.postActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.mediaButton {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mediaButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.post {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userName {
+  font-weight: 500;
+}
+
+.userPosition {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.timestamp {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.postContent {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.actionButton {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  color: white;
+}
+
+.actionButton.liked {
+  color: #4F46E5;
+}
+
+.sidebar {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.quickAccess {
+  margin-bottom: 2rem;
+}
+
+.quickAccess h3,
+.activeColleagues h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.quickAccess button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quickAccess button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.sideNav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.sideNav:hover {
+  width: 240px;
+}
+
+.sideNavContent {
+  padding: 20px 0;
+  width: 240px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  user-select: none;
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.navItem.active {
+  color: white;
+  background: rgba(79, 70, 229, 0.2);
+  border-left: 3px solid #4F46E5;
+}
+
+.icon {
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+  margin-right: 16px;
+}
+
+.label {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.badge {
+  position: absolute;
+  right: 20px;
+  background: #4F46E5;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}

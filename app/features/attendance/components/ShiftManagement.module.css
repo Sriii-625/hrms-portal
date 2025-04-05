@@ -1,0 +1,108 @@
+.container {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  color: white;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.shiftForm {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.inputGroup {
+  margin-bottom: 16px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+}
+
+.timeInputs {
+  display: flex;
+  gap: 16px;
+}
+
+.timeInputs .inputGroup {
+  flex: 1;
+}
+
+.addButton {
+  background: #4F46E5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  background: #4338CA;
+  transform: translateY(-2px);
+}
+
+.shiftList {
+  margin-top: 24px;
+}
+
+.shiftList h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.shiftItem {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.shiftItem:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.shiftName {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.shiftTime {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+} 
