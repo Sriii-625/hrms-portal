@@ -17,16 +17,9 @@ export default function TimeTracking() {
   const [timeRecords, setTimeRecords] = useState<TimeRecord[]>([]);
   const [currentSession, setCurrentSession] = useState<TimeRecord | null>(null);
 
-  useEffect(() => {
-    fetch('http://localhost:5000/api/time')
-      .then(res => res.json())
-      .then(data => setTimeRecords(data))
-      .catch(err => console.error('Error fetching time records:', err));
-  }, []);
-
-  const formatDateTime = () => {
-    const now = new Date();
-    return now.toLocaleString('en-US', {
+  // Format date-time string
+  const formatDateTime = (date = new Date()) => {
+    return date.toLocaleString('en-US', {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
@@ -37,19 +30,48 @@ export default function TimeTracking() {
     });
   };
 
-  const handleTimeIn = async () => {
+  // Load records + active session from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('currentSession');
+    if (saved) setCurrentSession(JSON.parse(saved));
+
+    fetch('http://localhost:5000/api/time')
+      .then(res => res.json())
+      .then(data => setTimeRecords(data))
+      .catch(err => console.error('Error fetching time records:', err));
+  }, []);
+
+  const handleTimeIn = () => {
     if (currentSession) {
       alert('You are already clocked in!');
       return;
     }
 
+    const now = new Date();
     const newRecord: TimeRecord = {
       id: Date.now(),
       name: 'Current User',
-      timeIn: formatDateTime(),
+      timeIn: formatDateTime(now),
       timeOut: 'Not clocked out',
       location: 'Office',
       isActive: true
+    };
+
+    // Save locally only — POST will happen on Time Out
+    setCurrentSession(newRecord);
+    localStorage.setItem('currentSession', JSON.stringify(newRecord));
+  };
+
+  const handleTimeOut = async () => {
+    if (!currentSession) {
+      alert('You need to clock in first!');
+      return;
+    }
+
+    const finishedSession: TimeRecord = {
+      ...currentSession,
+      timeOut: formatDateTime(),
+      isActive: false
     };
 
     try {
@@ -58,49 +80,20 @@ export default function TimeTracking() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(newRecord)
+        body: JSON.stringify(finishedSession)
       });
 
-      if (!res.ok) throw new Error('Failed to save session');
+      if (!res.ok) throw new Error('Failed to save time-out session');
 
       const savedRecord = await res.json();
       setTimeRecords(prev => [...prev, savedRecord]);
-      setCurrentSession(savedRecord);
+
+      // Clear session
+      setCurrentSession(null);
+      localStorage.removeItem('currentSession');
     } catch (err) {
-      console.error('Error saving session:', err);
+      console.error('Error saving time-out session:', err);
     }
-  };
-
-  const updateSession = async (_id: string, updates: Partial<TimeRecord>) => {
-    try {
-      const res = await fetch(`http://localhost:5000/api/time/${_id}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updates)
-      });
-      if (!res.ok) throw new Error('Failed to update session');
-      const updated = await res.json();
-      setTimeRecords(prev =>
-        prev.map(record => (record._id === updated._id ? updated : record))
-      );
-    } catch (err) {
-      console.error('Error updating session:', err);
-    }
-  };
-
-  const handleTimeOut = () => {
-    if (!currentSession || !currentSession._id) {
-      alert('You need to clock in first!');
-      return;
-    }
-
-    const updates: Partial<TimeRecord> = {
-      timeOut: formatDateTime(),
-      isActive: false
-    };
-
-    updateSession(currentSession._id, updates);
-    setCurrentSession(null);
   };
 
   const existingRecords = timeRecords.filter(record => record._id !== currentSession?._id);
